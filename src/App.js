@@ -5,16 +5,16 @@ import Todo from "./components/Todo";
 // import { firestore } from "./firebaseConfig";
 
 function App() {
-  useEffect(() => {
-    onSnapshot(collection(firestore, "todoList"), {
-      next: ({ docs }) => {
-        docs.forEach((doc) => {
-          console.log(doc.data(), doc.id);
-        });
-      },
-    });
-    console.log(firestore);
-  }, []);
+  // useEffect(() => {
+  //   onSnapshot(collection(firestore, "todoList"), {
+  //     next: ({ docs }) => {
+  //       docs.forEach((doc) => {
+  //         console.log(doc.data(), doc.id);
+  //       });
+  //     },
+  //   });
+  //   console.log(firestore);
+  // }, []);
 
   return <Todo />;
 }
